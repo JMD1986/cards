@@ -31,15 +31,17 @@ defmodule Cards do
   end
 
   @doc """
-    Divides a deck into a hand and the remainder of the deck.
-    The `hand_size` argument indicates how many cards should
-    be in the hand.
+  Splits a deck between a hand and the remainder of the deck. The `hand_size` arguments indicates the number of cards in a hand.
+
   ## Examples
+
       iex> deck = Cards.create_deck
       iex> {hand, deck} = Cards.deal(deck, 1)
       iex> hand
       ["Ace of Spades"]
+
   """
+  
   def deal(deck, hand_size) do
     Enum.split(deck, hand_size)
   end
